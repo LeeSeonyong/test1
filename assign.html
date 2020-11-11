@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>factorization</title>
+</head>
+<body>
+    <script>
+        let input = prompt('please give me input (input range: 0~1000000)', ' ');
+        input = Number(input);
+        let output;
+        if(input == 0){
+            output = 0;
+        }
+        else{
+            for(let i = 1; i<=input; i++){
+                if(input%i==0){
+                    if(input==i){
+                        output = i;
+                        break;
+                    }
+                if(i!=1){
+                    while(input%i==0){
+                        input = input/i;
+                        if(input==i){
+                            output = i;
+                            break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        alert("output is : " + output);
+    </script>
+</body>
+</html>
